@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contato</title>
+    <link rel="stylesheet" href="css/contato.css" />
+  </head>
+  <body>
+    <header class="topo">
+      <div class="topo-menu">
+        <div>
+          <a href="home.html"
+            ><img src="imagens/logo.png" class="logo" alt="consultoria"
+          /></a>
+        </div>
+        <nav class="menu">
+          <ul class="opcao">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="##">Serviços</a></li>
+            <li><a href="#">Sobre Nós</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </nav>
+
+        <div class="topo-direita">
+          <a href="login.html" class="login">Login</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="texto-centro">
+        <h2>Página de Contato</h2>
+        <h4>Faça seu cadastro para contato</h4>
+      </div>
+      <form method="post" enctype="multipart/form-data">
+        <section class="card">
+          <section class="campo">
+            <label
+              >Nome
+              <p>*</p></label
+            >
+            <input type="text" placeholder="Nome completo" />
+          </section>
+
+          <section class="campo">
+            <label
+              >Email
+              <p>*</p></label
+            >
+            <input type="email" placeholder="Email" />
+          </section>
+
+          <section class="campo">
+            <label
+              >Telefone
+              <p>*</p></label
+            >
+            <span class="fone"
+              ><input type="number" placeholder="(DDD)" class="ddd" /> -
+              <input type="number" placeholder="Telefone" class="fone"
+            /></span>
+          </section>
+
+          <section class="campo">
+            <label
+              >CPF
+              <p>*</p></label
+            >
+            <input type="number" placeholder="CPF" />
+          </section>
+          <div class="apertar">
+            <button
+              type="submit"
+              onclick="alert('Currículo enviado com sucesso!!')"
+              class="button"
+            >
+              Enviar
+            </button>
+            <button
+              type="reset"
+              onclick="alert('Formulário limpo com sucesso!!')"
+              class="button"
+            >
+              Limpar
+            </button>
+          </div>
+        </section>
+      </form>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background-color: rgb(0, 0, 0);
+  border-bottom: 1px solid red;
+}
+
+.logo {
+  height: 110px;
+  transition: 0.3s;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.topo-menu {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.menu {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin-left: -20px;
+}
+
+.menu a {
+  position: relative;
+  text-decoration: none;
+  font-size: 17px;
+  transition: font-size 0.3s;
+  color: #f7f8f0;
+}
+
+.menu a:hover {
+  text-shadow: 0 0 15px #f7f8f0;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #f7f8f0;
+  transition: 0.3s;
+}
+
+.topo-direita {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.login {
+  padding: 10px 22px;
+  text-decoration: none;
+  background: linear-gradient(45deg, #e6e6e6, #afafaf);
+  color: black;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.856);
+  position: relative;
+  margin-right: 100px;
+}
+
+.login:hover {
+  background: #ff0000;
+  transform: scale(1.05);
+}
+
+a {
+  text-decoration: none;
+  color: #f7f8f0;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.opcao {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  align-items: center;
+}
+
+.texto-centro {
+  color: #000000;
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.texto-centro h4 {
+  font-size: 22px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 8px;
+  color: aliceblue;
+  background-color: rgba(0, 0, 0, 0.562);
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0);
+  width: 30%;
+  margin-left: 35%;
+}
+
+.campo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.campo label {
+  width: 180px;
+  color: white;
+  font-weight: bold;
+  display: flex;
+}
+
+.campo input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.ddd {
+  width: 78px;
+}
+
+label p {
+  margin-left: 4px;
+  color: #d43737;
+}
+
+.letra {
+  width: 180px;
+  color: white;
+  font-weight: bold;
+}
+
+.apertar {
+  display: flex;
+  justify-content: space-around;
+}
+
+.button {
+  display: flex;
+  padding: 10px;
+  background-color: #ec0707;
+  width: 45%;
+  border: none;
+  border-radius: 12px;
+  color: aliceblue;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: translateY(-6px);
+  transition: 0.3s;
+}
+
+.produtos {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  color: #000000;
+  margin-top: 10vh;
+  margin-left: 24%;
+}
+
+.produtos-maquinas1 {
+  display: flex;
+  gap: 30px;
+}
+
+.produtos-maquinas2 {
+  display: flex;
+  gap: 30px;
+}
+
+.produtos h2 {
+  font-size: 32px;
+}
+
+.sessao {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.box-pro1,
+.box-pro2 {
+  background-color: #1d0202ea;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.box-pro1 p,
+.box-pro2 p {
+  margin-bottom: 10px;
+  color: #f7f8f0;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.box-pro1 img,
+.box-pro2 img {
+  
+  height: 150px;
+  border-radius: 6px;
+  background-color: #e00a0a94;
+  margin-bottom: 10px;
+}
+
+.barra {
+    margin-top: 50px;
+    background-color: black;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    position: end;
+    padding: 2rem;
+    border-top: 1px solid red;
+}
+
+.paragrafo-footer {
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    justify-content: center;
+    display: flex;
+    flex: 1;
+}

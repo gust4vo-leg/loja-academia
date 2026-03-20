@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>teste</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="topo">
+      <div class="topo-menu">
+        <div>
+          <a href="home.html"
+            ><img src="imagens/logo.png" class="logo" alt="consultoria"
+          /></a>
+        </div>
+        <nav class="menu">
+          <ul class="opcao">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#produtos">Produtos</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+
+        <div class="topo-direita">
+          <a href="login.html" class="login">Login</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="produtos" id="produtos">
+        <h2>Produtos</h2>
+        <section class="aparelhos" id="aparelhos">
+          <div class="sessao">Aparelhos</div>
+          <div class="produtos-maquinas1">
+            <div class="box-pro1">
+              <img src="imagens/supino.png" alt="supino" class="img-produto" />
+              <p>Estação de Musculação<br> Banco Supino</p>
+              <p>R$ 430,00</p>
+            </div>
+            <div class="box-pro2">
+              <img src="imagens/leg.png" alt="leg" class="img-produto2" />
+              <p>Leg Press 90°</p>
+              <p>R$ 2.000,00</p>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section class="contato" id="contato">
+        <div class="texto-centro">
+          <h2>Página de Contato</h2>
+          <h4>Faça seu cadastro para contato</h4>
+        </div>
+
+        <form method="post" enctype="multipart/form-data">
+          <section class="card">
+            <section class="campo">
+              <label
+                >Nome
+                <p>*</p></label
+              >
+              <input type="text" placeholder="Nome completo" />
+            </section>
+
+            <section class="campo">
+              <label
+                >Email
+                <p>*</p></label
+              >
+              <input type="email" placeholder="Email" />
+            </section>
+
+            <section class="campo">
+              <label
+                >Telefone
+                <p>*</p></label
+              >
+              <span class="fone"
+                ><input type="number" placeholder="(DDD)" class="ddd" /> -
+                <input type="number" placeholder="Telefone" class="fone"
+              /></span>
+            </section>
+
+            <section class="campo">
+              <label
+                >CPF
+                <p>*</p></label
+              >
+              <input type="number" placeholder="CPF" />
+            </section>
+            <div class="apertar">
+              <button
+                type="submit"
+                onclick="alert('Currículo enviado com sucesso!!')"
+                class="button"
+              >
+                Enviar
+              </button>
+              <button
+                type="reset"
+                onclick="alert('Formulário limpo com sucesso!!')"
+                class="button"
+              >
+                Limpar
+              </button>
+            </div>
+          </section>
+        </form>
+      </section>
+    </main>
+    <footer>
+        <div class="barra">
+            <span class="paragrafo-footer">© 2026 - Projeto de estudo - academia</span>
+        </div>
+    </footer>
+  </body>
+</html>
