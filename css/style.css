@@ -5,6 +5,10 @@
   font-family: "Inter", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #0e0e0e;
   color: white;
@@ -208,6 +212,28 @@ h2 {
 
 .produto button:hover {
   background: darkred;
+}
+
+.saiba-mais {
+  text-align: center;
+  padding: 10px 20px;
+  cursor: pointer;
+  background: red;
+  border-radius: 6px;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.saiba-mais:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease;
+  background: darkred;
+}
+
+.saiba-mais a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
 }
 
 #contato {
