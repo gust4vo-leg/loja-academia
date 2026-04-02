@@ -1,7 +1,9 @@
 <?php
 require_once 'init.php';
+// print $_GET['categoria'];
 // print "<pre>";
 // print_r($produtos_base);
+$categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +33,7 @@ require_once 'init.php';
                 <ul>
                     <?php
                     foreach ($categorias as $kcat => $nome) {
-                        print '<a href="#cat ' . $kcat . '"> ' . $nome . '</a>';
+                        print '<a href="produtos.php?categoria=' . $nome . '">' . $nome . '</a>';
                     };
                     ?>
                 </ul>
@@ -43,13 +45,17 @@ require_once 'init.php';
                 <h2>Aparelhos</h2>
                 <div class="grid">
                     <?php
-                    foreach ( $_SESSION['produtos'] as $produtos_aparelho) {
-                        print '<article class="produto">
-                        <img src="' . $produtos_aparelho['imagem'] . '" alt="Banco supino">
-                        <h3>' . $produtos_aparelho['nome'] . '</h3>
-                        <p class="preco">R$ ' . $produtos_aparelho['preco'] . '</p>
-                        <button>Comprar</button>
-                    </article>';
+                    foreach ($_SESSION['produtos'] as $produtos_aparelho) {
+
+                        if ($categoria_get === 'aparelhos' || $produtos_aparelho['categoria'] === $categoria_get) {
+
+                            print '<article class="produto">
+            <img src="' . $produtos_aparelho['imagem'] . '" alt="">
+            <h3>' . $produtos_aparelho['nome'] . '</h3>
+            <p class="preco">R$ ' . $produtos_aparelho['preco'] . '</p>
+            <button>Comprar</button>
+        </article>';
+                        }
                     }
                     ?>
                 </div>
@@ -98,7 +104,7 @@ require_once 'init.php';
                         <img src="' . $produto_roupa['imagem'] . '" alt="moletom">
                         <h3>' . $produto_roupa['nome'] . '</h3>
                         <p class="preco">R$ ' . $produto_roupa['preco'] . '</p>
-                        <button>Comprar</button>
+                        <button><a href="verificacao_produto.php">Comprar</a></button>
                     </article>';
                     }
                     ?>
@@ -118,13 +124,13 @@ require_once 'init.php';
                     </article>';
                     }
                     ?>
-                    
+
                 </div>
             </section>
         </section>
     </main>
 
-    <?php 
+    <?php
     require_once 'partials/footer.php';
     ?>
 
