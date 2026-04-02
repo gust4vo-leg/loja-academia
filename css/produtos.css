@@ -138,15 +138,26 @@ body {
 }
 
 .container {
+    margin-left: 20px;
     max-width: 1200px;
-    margin: 0 auto;
     padding: 60px 40px;
-    margin-top: 150px;
+    margin-top: 100px;
     display: flex;
+    margin-bottom: -5rem;
 }
 
 .tipos {
     margin: 20px 20px auto;
+}
+
+.tipos a:hover {
+    color: rgb(209, 23, 23);
+}
+
+.tipos ul {
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
 }
 
 .tipos a {
@@ -172,7 +183,7 @@ h2 {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
 }
 
@@ -201,7 +212,7 @@ h2 {
 }
 
 .preco {
-    color: red;
+    color: rgb(255, 0, 0);
     font-weight: bold;
     margin-bottom: 10px;
 }

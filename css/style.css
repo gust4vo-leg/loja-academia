@@ -286,6 +286,14 @@ form button:hover {
   background: darkred;
 }
 
+textarea {
+    resize:none;
+    height: 50px;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+
 .main-footer {
     background: #0a0a0a;
     margin-top: 120px;

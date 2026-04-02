@@ -1,49 +1,23 @@
+<?php
+require_once 'init.php';
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fit Force</title>
+  <title>Inicio - <?php echo $nomeLoja; ?></title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="imagens/logo.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 </head>
 
 <body>
-
-  <header class="topo">
-    <div class="topo-menu">
-      <a href="#home">
-        <img src="imagens/logo.png" class="logo" alt="Logo Fit Force">
-      </a>
-
-      <nav>
-        <ul class="menu">
-          <li><a href="index.html">Home</a></li>
-
-          <li class="dropdown">
-            <a href="#">Produtos<span class="arrow"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#aparelhos">Aparelhos</a></li>
-              <li><a href="#ergometros">Ergômetros</a></li>
-              <li><a href="#suplementos">Suplementos</a></li>
-              <li><a href="#roupas">Roupas</a></li>
-              <li><a href="produtos.html">Outros</a></li>
-          </li>
-        </ul>
-
-
-        <li><a href="#contato">Contato</a></li>
-        </ul>
-      </nav>
-
-      <div class="topo-direito">
-        <a href="login.html" class="login">Login</a>
-        <a href="cadastrar.html" class="cadastrar">Cadastrar</a>
-      </div>
-    </div>
-  </header>
+  <?php
+  require 'partials/header.php';
+  ?>
   <section class="hero" id="home">
     <div class="hero-texto">
       <h1>FIT FORCE</h1>
@@ -153,98 +127,32 @@
 
     </section>
 
-    <p class="saiba-mais"><a href="produtos.html">Mais Produtos</a></p>
+    <p class="saiba-mais"><a href="produtos.php">Mais Produtos</a></p>
 
     <section id="contato">
       <h2>Contato</h2>
 
-      <form>
+      <form action="receber/recebe.php" method="POST">
         <input type="text" name="nome" placeholder="Nome completo" required>
         <input type="email" name="email" placeholder="Email" required>
         <input type="text" name="telefone" placeholder="Telefone" required>
+
+        <textarea placeholder="Envie sua mensagem" name="texto"></textarea>
 
         <button type="submit">Enviar</button>
       </form>
     </section>
 
-   <p class="saiba-mais"><a href="cadastrar-produto.html">Cadastrar Produto</a></p>
+    <p class="saiba-mais"><a href="cadastrar-produto.php">Cadastrar Produto</a></p>
 
   </main>
 
-  <footer>
-    <div class="main-footer">
-      <div class="container-footer">
-        <div class="row">
-          <div class="col-footer">
-            <h4>Ajuda e Atendimento</h4>
-            <ul class="lista">
-              <li>Acompanhe o seu pedido</li>
-              <li>Dúvidas Frequente</li>
-              <li>Fale com a gente</li>
-              <li>Troca e arrependimento</li>
-            </ul>
-          </div>
-          <div class="col-footer">
-            <h4>Políticas e regulamentos</h4>
-            <ul>
-              <li>Política de cookies</li>
-              <li>Política de Privacidade</li>
-              <li>Política de troca e arrependimento</li>
-              <li>Regulamentos</li>
-              <li>Segurança</li>
-              <li>Termos e condições</li>
-            </ul>
-          </div>
-          <div class="col-footer">
-            <h4>Serviços Fit Force</h4>
-            <ul>
-              <li>Encontre uma loja</li>
-              <li>Cupons de desconto</li>
-              <li>Denuncie fraudes digitais</li>
-              <li>Spoint - Troque pontos por benefícios</li>
-            </ul>
-          </div>
-          <div class="col-footer">
-            <h4>Nossos Produtos</h4>
-            <ul>
-              <li>Aparelhos</li>
-              <li>Ergômetros</li>
-              <li>Suplementos</li>
-              <li>Roupa Masculina</li>
-              <li>Roupa Feminina</li>
-              <li>Outros</li>
-            </ul>
-          </div>
-
-        </div>
-        <div class="dor-footer">
-          <div class="pagamento">
-            <p>Formas de pagamentos:</p>
-            <img src="imagens/pix.png">
-            <img src="imagens/master-card.png">
-            <img src="imagens/visa.png">
-            <img src="imagens/elo.png">
-          </div>
-          <div class="contato">
-            <p>Formas de Contato:</p>
-            <div class="icons">
-              <p><i class="bi bi-whatsapp"></i></p>
-              <p><i class="bi bi-instagram"></i></p>
-              <p><i class="bi bi-facebook"></i></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="barra">
-        <div class="logo-footer">
-          <img src="imagens/logo.png">
-        </div>
-        <p class="paragrafo-footer">© 2026 - Fit Force</p>
-      </div>
-  </footer>
+  <?php
+  require_once 'partials/footer.php';
+  ?>
 
   <script>
-    window.onscroll = function () {
+    window.onscroll = function() {
       const header = document.querySelector('.topo');
 
       if (window.scrollY > 350) {
