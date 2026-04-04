@@ -1,14 +1,10 @@
-<?php
-require_once 'init.php';
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastrar - <?php echo $nomeLoja; ?></title>
+    <title>Cadastrar - Fit Force</title>
     <link rel="stylesheet" href="css/cadastrar.css">
     <link rel="icon" href="imagens/logo.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
@@ -49,12 +45,12 @@ require_once 'init.php';
                 <h2>Cadastrar</h2>
 
                 <input type="text" placeholder="Nome Completo" name="nome" required>
-                <input type="email" placeholder="Email" name="email" required>
-                <input type="password" placeholder="Criar Senha" name="criarsenha" required>
-                <input type="password" placeholder="Confirmar Senha" name="confirmarsenha" required>
-                <input type="number" placeholder="CPF" name="cpf" required>
+                <input type="email" placeholder="Email" name="email"  required>
+                <input type="password" placeholder="Criar Senha"  name="criarsenha" required>
+                <input type="password" placeholder="Confirmar Senha"  name="confirmarsenha" required>
+                <input type="number" placeholder="CPF"  name="cpf" required>
 
-                <button type="submit">Cadastrar</button>
+                <button type="submit"><a href="login.php">Cadastrar</a></button>
 
                 <div class="opcoes">
                     <p> <i class="bi bi-google"></i></p>

@@ -1,8 +1,3 @@
-<?php
-require_once 'init.php';
-?>
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -10,7 +5,7 @@ require_once 'init.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Fit Foce</title>
-    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 </head>
 
@@ -23,7 +18,7 @@ require_once 'init.php';
 
             <nav>
                 <ul class="menu">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
 
                     <li class="dropdown">
                         <a href="#">Produtos<span class="arrow"></span></a>
@@ -31,16 +26,16 @@ require_once 'init.php';
                             <li><a href="#aparelhos">Aparelhos</a></li>
                             <li><a href="#ergometros">Ergômetros</a></li>
                             <li><a href="#suplementos">Suplementos</a></li>
-                            <li><a href="produtos.html #roupas">Roupas</a></li>
-                            <li><a href="produtos.html">Outros</a></li>
+                            <li><a href="produtos.php #roupas">Roupas</a></li>
+                            <li><a href="produtos.php">Outros</a></li>
                         </ul>
                     </li>
 
-                    <li><a href="index.html">Contato</a></li>
+                    <li><a href="index.php">Contato</a></li>
                 </ul>
             </nav>
 
-            <a href="cadastrar.html" class="cadastrar">Cadastrar</a>
+            <a href="cadastrar.php" class="cadastrar">Cadastrar</a>
         </div>
     </header>
     <main>
@@ -49,18 +44,14 @@ require_once 'init.php';
                 <h2>Login</h2>
 
 
-
-
-                <input type="email" placeholder="Email" name="email-login" required>
-                <input type="password" placeholder="Senha" name="senha-login" required>
-                <input type="password" placeholder="Confirmar Senha" name="confirmar-senha-login" required>
-
+                <input type="email" placeholder="Email" name="email-login">
+                <input type="password" placeholder="Senha" name="senha-login">
+                <input type="password" placeholder="Confirmar Senha" name="confirmar-senha-login">
 
                 <a href="#">Esqueceu senha?</a>
 
-
                 <br>
-                <button type="submit" class="botao"><a href="index.php"> Entrar</a></button>
+                <button type="submit" class="botao"><a href="index.php">Entrar</a></button>
                 <div class="opcoes">
                     <p> <i class="bi bi-google"></i></p>
                     <P><i class="bi bi-facebook"></i></P>
@@ -68,7 +59,6 @@ require_once 'init.php';
                 </div>
             </form>
         </section>
-
     </main>
     <?php
     require_once 'partials/footer.php';

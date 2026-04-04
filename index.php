@@ -1,23 +1,21 @@
-<?php
-require_once 'init.php';
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inicio - <?php echo $nomeLoja; ?></title>
+  <title>Fit Force</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="imagens/logo.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 </head>
 
 <body>
+
   <?php
-  require 'partials/header.php';
-  ?>
+    require_once 'partials/header.php';
+    ?>
+
   <section class="hero" id="home">
     <div class="hero-texto">
       <h1>FIT FORCE</h1>
@@ -127,7 +125,7 @@ require_once 'init.php';
 
     </section>
 
-    <p class="saiba-mais"><a href="produtos.php">Mais Produtos</a></p>
+      <p class="saiba-mais"><a href="produtos.php">Mais Produtos</a></p>
 
     <section id="contato">
       <h2>Contato</h2>
@@ -137,32 +135,28 @@ require_once 'init.php';
         <input type="email" name="email" placeholder="Email" required>
         <input type="text" name="telefone" placeholder="Telefone" required>
 
-        <textarea placeholder="Envie sua mensagem" name="texto"></textarea>
-
         <button type="submit">Enviar</button>
       </form>
     </section>
 
-    <p class="saiba-mais"><a href="cadastrar-produto.php">Cadastrar Produto</a></p>
-
+    <p class="cadastro-produto"><a  href="cadastrar-produto.php">Cadastrar Produto</a></p>
   </main>
 
-  <?php
-  require_once 'partials/footer.php';
-  ?>
-
-  <script>
-    window.onscroll = function() {
-      const header = document.querySelector('.topo');
-
-      if (window.scrollY > 350) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    };
-  </script>
+   <?php
+    require_once 'partials/footer.php';
+    ?>
+    
+   <script>
+        window.onscroll = function() {
+            const header = document.querySelector('.topo');
+            
+            if (window.scrollY > 350) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        };
+    </script>
 
 </body>
-
 </html>

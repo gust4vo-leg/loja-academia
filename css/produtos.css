@@ -138,47 +138,71 @@ body {
 }
 
 .container {
-    margin-left: 20px;
-    max-width: 1200px;
+    max-width: 1700px;
+    margin: 0 auto;
     padding: 60px 40px;
-    margin-top: 100px;
+    margin-top: 150px;
+}
+
+.container ul {
     display: flex;
-    margin-bottom: -5rem;
-}
-
-.tipos {
-    margin: 20px 20px auto;
-}
-
-.tipos a:hover {
-    color: rgb(209, 23, 23);
-}
-
-.tipos ul {
     list-style: none;
+    gap: 30px;
+}
+
+.container nav {
+    width: 100%;
+}
+
+.container nav ul {
     display: flex;
-    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+/* .container li {
+    padding: 10px;
+    border: 1px solid red;
+    border-radius: 6px;
+} */
+
+/* .container li:hover {
+    background-color: red;
+} */
+
+.container nav ul li a {
+  padding: 10px 16px;
+  border-radius: 6px;
+  transition: 0.3s;
+  border: 1px solid red;
 }
 
-.tipos a {
+.container nav ul li a:hover {
+  background-color: red;
+}
+
+.ativo {
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.ativo:hover {
+    background-color: red;
+}
+
+nav a.ativo {
+    background-color: red;
+    color: white;
     text-decoration: none;
-    color: #aaa;
 }
 
-main h1 {
-    font-size: 42px;
-    border-bottom: 4px solid red;
-    width: 185px;
+nav a{
+    text-decoration: none;
+    color: white;
 }
 
 section {
     padding: 80px 40px;
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 32px;
 }
 
 .grid {
@@ -212,12 +236,17 @@ h2 {
 }
 
 .preco {
-    color: rgb(255, 0, 0);
+    color: red;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-.produto button {
+.produto a:hover {
+    background: darkred;
+}
+
+.produto a {
+    text-decoration: none;
     background: red;
     border: none;
     padding: 10px 20px;
@@ -225,65 +254,6 @@ h2 {
     border-radius: 6px;
     cursor: pointer;
     transition: 0.3s;
-}
-
-.produto button:hover {
-    background: darkred;
-}
-
-.saiba-mais {
-    text-align: center;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-.saiba-mais:hover {
-    transform: scale(1.05);
-    transition: 0.3s ease;
-}
-
-.saiba-mais a {
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-}
-
-#contato {
-    text-align: center;
-}
-
-form {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-input {
-    padding: 10px;
-    border-radius: 6px;
-    border: none;
-}
-
-form button {
-    background: red;
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-button a {
-    text-decoration: none;
-    color: white;
-}
-
-form button:hover {
-    background: darkred;
 }
 
 .main-footer {

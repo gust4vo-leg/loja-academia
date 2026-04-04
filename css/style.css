@@ -15,12 +15,12 @@ body {
 }
 
 .topo {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 15px 40px;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 40px;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
 }
 
 .topo.scrolled {
@@ -29,114 +29,110 @@ body {
 }
 
 .topo-menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
-    width: 80px;
+  width: 80px;
 }
 
 .menu {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    position: absolute;
+  list-style: none;
+  display: flex;
+  gap: 30px;
 }
 
 .menu a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    position: relative;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
 }
 
 .menu a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 0%;
-    height: 2px;
-    background: red;
-    transition: 0.3s;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: red;
+  transition: 0.3s;
 }
 
 .menu a:hover::after {
-    width: 100%;
+  width: 100%;
 }
 
 .dropdown {
-    position: relative;
+  position: relative;
 }
 
 .dropdown-menu {
-    position: absolute;
-    top: 120%;
-    left: 0;
-    background: #111;
-    border-radius: 8px;
-    list-style: none;
-    padding: 10px 0;
-    min-width: 180px;
-    display: none;
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background: #111;
+  border-radius: 8px;
+  list-style: none;
+  padding: 10px 0;
+  min-width: 180px;
+  display: none;
 }
 
 .dropdown-menu li {
-    padding: 10px 20px;
+  padding: 10px 20px;
 }
 
 .dropdown-menu li:hover {
-    background: red;
+  background: red;
 }
 
 .dropdown-menu a {
-    color: white;
+  color: white;
 }
 
 .dropdown:hover .dropdown-menu {
-    display: block;
+  display: block;
 }
 
 .arrow {
-    display: inline-block;
-    border: 1px solid white;
-    border-width: 0 2px 2px 0;
-    padding: 3px;
-    margin-left: 6px;
-    margin-bottom: 2px;
-    transform: rotate(45deg);
+  display: inline-block;
+  border: 1px solid white;
+  border-width: 0 2px 2px 0;
+  padding: 3px;
+  margin-left: 6px;
+  margin-bottom: 2px;
+  transform: rotate(45deg);
 }
 
 .login {
-    border: 1px solid red;
-    padding: 8px 18px;
-    border-radius: 20px;
-    text-decoration: none;
-    color: white;
-    transition: 0.3s;
+  border: 1px solid red;
+  padding: 8px 18px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
 }
 
 .login:hover {
-    background: red;
+  background: red;
 }
 
 .cadastrar {
-    margin-left: 10px;
-    border: 1px solid red;
-    padding: 8px 18px;
-    border-radius: 20px;
-    text-decoration: none;
-    color: white;
-    transition: 0.3s;
+  text-decoration: none;
+  border: 1px solid red;
+  padding: 8px 18px;
+  border-radius: 20px;
+  color: white;
+  transition: 0.3s;
 }
 
 .cadastrar:hover {
-    background-color: red;
+  background: red;
 }
-
 
 .hero {
   height: 100vh;
@@ -286,13 +282,27 @@ form button:hover {
   background: darkred;
 }
 
-textarea {
-    resize:none;
-    height: 50px;
-    border-radius: 6px;
-    padding: 10px;
+.cadastro-produto {
+  text-align: center;
+  padding: 10px 20px;
+  cursor: pointer;
+  background: red;
+  border-radius: 6px;
+  max-width: 200px;
+  margin: 0 auto;
 }
 
+.cadastro-produto:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease;
+  background-color: darkred;
+}
+
+.cadastro-produto a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
 
 .main-footer {
     background: #0a0a0a;

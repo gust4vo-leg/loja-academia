@@ -1,14 +1,10 @@
-<?php
-require_once 'init.php';
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produto - <?php echo $nomeLoja; ?></title>
+    <title>Produto - Fit Force</title>
 
     <link rel="stylesheet" href="css/verificacao_produto.css">
     <link rel="icon" href="imagens/logo.png">
@@ -18,8 +14,9 @@ require_once 'init.php';
 <body>
 
     <?php
-    require 'partials/header.php';  
-  ?>
+    require_once 'partials/header.php';
+    ?>
+
     <main class="container">
 
         <p class="caminho-produtos">
@@ -47,7 +44,7 @@ require_once 'init.php';
                     ⭐⭐⭐⭐⭐ <span>(124 avaliações)</span>
                 </div>
 
-                <p class="preco">R$ 149,90</p>
+                <p class="preco">R$ 249,90</p>
 
                 <p class="descricao">
                     Moletom confortável, ideal para o dia a dia.
@@ -139,7 +136,7 @@ require_once 'init.php';
             </form>
         </section>
     </main>
-    <?php 
+    <?php
     require_once 'partials/footer.php';
     ?>
     <script>

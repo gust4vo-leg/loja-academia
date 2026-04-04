@@ -1,3 +1,4 @@
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +11,7 @@ body {
     color: white;
 }
 
+/* ================= HEADER ================= */
 
 .topo {
     position: fixed;
@@ -30,6 +32,8 @@ body {
 .logo {
     width: 80px;
 }
+
+/* MENU */
 
 .menu {
     display: flex;
@@ -59,6 +63,8 @@ body {
     width: 100%;
 }
 
+/* DROPDOWN */
+
 .dropdown {
     position: relative;
 }
@@ -85,6 +91,8 @@ body {
     display: block;
 }
 
+/* SETA */
+
 .arrow {
     display: inline-block;
     width: 6px;
@@ -99,6 +107,8 @@ body {
 .dropdown:hover .arrow {
     transform: rotate(-135deg);
 }
+
+/* BOTÕES */
 
 .topo-direito a {
     border: 1px solid red;
@@ -427,3 +437,7 @@ form button:hover {
     color: #aaa;
 }
 
+
+.logo-footer img {
+    height: 110px;
+}
