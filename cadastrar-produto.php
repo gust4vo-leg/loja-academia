@@ -64,12 +64,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <label>Categoria</label>
                             <select name="categoria">
                                 <option>Selecione</option>
-                                <option value="Roupas Masculinas">Roupa Masculina</option>
-                                <option value="Roupa Feminina">Roupa Feminina</option>
-                                <option value="Aparelhos">Aparelhos</option>
-                                <option value="Ergômetros">Ergômetros</option>
-                                <option value="Suplementos">Suplementos</option>
-                                <option value="Outros">Outros</option>
+                                <option value="roupasmasculina">Roupa Masculina</option>
+                                <option value="roupafeminina">Roupa Feminina</option>
+                                <option value="aparelhos">Aparelhos</option>
+                                <option value="ergometros">Ergômetros</option>
+                                <option value="suplementos">Suplementos</option>
+                                <option value="outros">Outros</option>
                             </select>
                         </div>
 
