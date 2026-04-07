@@ -1,3 +1,21 @@
+<?php
+require_once 'init.php';
+
+$id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
+
+$produto = null;
+foreach ($_SESSION['produtos'] as $p) {
+    if ($p['id'] === $id) {
+        $produto = $p;
+        break;
+    }
+}
+
+if (!$produto) {
+    header('Location: produtos.php');
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -20,35 +38,34 @@
     <main class="container">
 
         <p class="caminho-produtos">
-            <a href="produtos.php">Produtos</a> / Moletom Fit Force
+            <a href="produtos.php">Produtos</a> / <?php echo $produto['nome']; ?>
         </p>
 
         <section class="produto">
 
             <div class="miniaturas">
-                <img src="imagens/moletom.png" onclick="trocarImagem(this)">
-                <img src="imagens/moletom-traseiro.png" onclick="trocarImagem(this)">
-                <img src="imagens/moletom-ldireito.png" onclick="trocarImagem(this)">
-                <img src="imagens/moletom-lesquerdo.png" onclick="trocarImagem(this)">
+                <img src="<?php echo $produto['imagem']; ?>" onclick="trocarImagem(this)">
+                <img src="<?php echo $produto['imagem']; ?>" onclick="trocarImagem(this)">
+                <img src="<?php echo $produto['imagem']; ?>" onclick="trocarImagem(this)">
+                <img src="<?php echo $produto['imagem']; ?>" onclick="trocarImagem(this)">
             </div>
 
             <div class="img-principal">
-                <img id="imgPrincipal" src="imagens/moletom.png">
+                <img id="imgPrincipal" src="<?php echo $produto['imagem']; ?>">
             </div>
 
             <div class="info">
 
-                <h2>Moletom Fit Force</h2>
+                <h2><?php echo $produto['nome']; ?></h2>
 
                 <div class="avaliacao">
                     ⭐⭐⭐⭐⭐ <span>(124 avaliações)</span>
                 </div>
 
-                <p class="preco">R$ 249,90</p>
+                <p class="preco">R$ <?php echo number_format($produto['preco'], 2, ',', '.'); ?></p>
 
                 <p class="descricao">
-                    Moletom confortável, ideal para o dia a dia.
-                    Material leve, resistente e perfeito para treinos ou uso casual.
+                    <?php echo isset($produto['texto']) ? $produto['texto'] : 'Produto de qualidade Fit Force.'; ?>
                 </p>
 
                 <div class="tamanhos">
@@ -67,47 +84,25 @@
             <h3>Recomendados para você:</h3>
 
             <div class="grid">
-                <article class="ver-produto">
-                    <img src="imagens/agasalho.png" alt="agasalho">
-                    <h3>Agasalho Fit Force</h3>
-                    <p class="preco">R$ 119,90</p>
-                    <button>Comprar</button>
-                </article>
-
-                <article class="ver-produto">
-                    <img src="imagens/whey.png" alt="Whey protein">
-                    <h3>Whey Protein</h3>
-                    <p class="preco">R$ 80,00</p>
-                    <button>Comprar</button>
-                </article>
-
-                <article class="ver-produto">
-                    <img src="imagens/camiseta-termica.png" alt="termico">
-                    <h3>Camiseta Térmica Fit Force</h3>
-                    <p class="preco">R$ 119,90</p>
-                    <button>Comprar</button>
-                </article>
-
-                <article class="ver-produto">
-                    <img src="imagens/creatina.png" alt="Creatina">
-                    <h3>Creatina</h3>
-                    <p class="preco">R$ 60,00</p>
-                    <button>Comprar</button>
-                </article>
-
-                <article class="ver-produto">
-                    <img src="imagens/preTreino.png" alt="pre-treino">
-                    <h3>Pré Treino</h3>
-                    <p class="preco">R$ 170,00</p>
-                    <button>Comprar</button>
-                </article>
-
-                <article class="ver-produto">
-                    <img src="imagens/agasalho.png" alt="agasalho">
-                    <h3>Agasalho Fit Force</h3>
-                    <p class="preco">R$ 119,90</p>
-                    <button>Comprar</button>
-                </article>
+                <?php
+                $recomendados = array_filter($_SESSION['produtos'], function($p) use ($id) {
+                    return $p['id'] !== $id;
+                });
+                $recomendados = array_values($recomendados);
+                shuffle($recomendados);
+                $recomendados = array_slice($recomendados, 0, 6);
+ 
+                foreach ($recomendados as $r) {
+                    echo '
+                    <article class="ver-produto">
+                        <img src="' . $r['imagem'] . '" alt="' . $r['nome'] . '">
+                        <h3>' . $r['nome'] . '</h3>
+                        <p class="preco">R$ ' . number_format($r['preco'], 2, ',', '.') . '</p>
+                        <a href="verificacao_produto.php?id=' . $r['id'] . '"><button>Comprar</button></a>
+                    </article>
+                    ';
+                }
+                ?>
             </div>
         </section>
         <section class="cupons">

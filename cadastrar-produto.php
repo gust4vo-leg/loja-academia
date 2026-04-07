@@ -64,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <label>Categoria</label>
                             <select name="categoria">
                                 <option>Selecione</option>
-                                <option value="roupasmasculina">Roupa Masculina</option>
+                                <option value="roupamasculina">Roupa Masculina</option>
                                 <option value="roupafeminina">Roupa Feminina</option>
                                 <option value="aparelhos">Aparelhos</option>
                                 <option value="ergometros">Ergômetros</option>

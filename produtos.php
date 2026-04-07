@@ -60,7 +60,7 @@ if (isset($_GET['produtoadd']) && $_GET['produtoadd'] === '1') {
         <div class="grid">
 
             <?php
-            foreach ($produtos_base as $produto) {
+            foreach ($_SESSION['produtos'] as $produto) {
 
                 // FILTRO POR CATEGORIA
                 if ($categoria_get && $produto['categoria'] != $categoria_get) {
