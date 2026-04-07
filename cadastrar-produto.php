@@ -3,30 +3,81 @@ require_once 'init.php';
 // print '<pre>';
 // print_r($_POST);
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+// if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    $ids = array_column($_SESSION['produtos'], 'id');
-    $novoId = $ids ? max($ids) + 1 : 1;
+//     $ids = array_column($_SESSION['produtos'], 'id');
+//     $novoId = $ids ? max($ids) + 1 : 1;
 
-    // if ($ids) {
-    // $novoId = max($ids)+1
-    //} else {
-    //  $novoId = 1;
-    // }
+// if ($ids) {
+// $novoId = max($ids)+1
+//} else {
+//  $novoId = 1;
+// }
 
-    $_SESSION['produtos'][] = [
-        'id' => $novoId,
-        'nome' => $_POST['nome'],
-        'preco' => $_POST['preco'],
-        'categoria' => $_POST['categoria'],
-        'imagem' => $_POST['imagem']
-    ];
-    header('Location: produtos.php?produtoadd=1');
-    exit;
-};
+//     $_SESSION['produtos'][] = [
+//         'id' => $novoId,
+//         'nome' => $_POST['nome'],
+//         'preco' => $_POST['preco'],
+//         'categoria' => $_POST['categoria'],
+//         'imagem' => $_POST['imagem']
+//     ];
+//     header('Location: produtos.php?produtoadd=1');
+//     exit;
+// };
 
 // print_r($_SESSION['produtos']);
 // print '</pre>';
+
+
+$erros = [];
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    $nome = trim($_POST['nome']);
+    $preco = $_POST['preco'];
+    $categoria = $_POST['categoria'];
+    $imagem = trim($_POST['imagem']);
+    $texto = trim($_POST['texto']);
+
+    // VALIDAÇÕES
+
+    if (empty($nome) || strlen($nome) < 3) {
+        $erros[] = "Nome inválido.";
+    }
+
+    if (!is_numeric($preco) || $preco <= 0) {
+        $erros[] = "Preço inválido.";
+    }
+
+    $categorias_validas = ['aparelhos', 'ergometros', 'suplementos', 'roupamasculina', 'roupafeminina', 'outros'];
+
+    if (!in_array($categoria, $categorias_validas)) {
+        $erros[] = "Categoria inválida.";
+    }
+
+    if (empty($imagem)) {
+        $erros[] = "Imagem obrigatória.";
+    }
+
+    // SE NÃO TIVER ERRO → SALVA
+    if (empty($erros)) {
+
+        $ids = array_column($_SESSION['produtos'], 'id');
+        $novoId = $ids ? max($ids) + 1 : 1;
+
+        $_SESSION['produtos'][] = [
+            'id' => $novoId,
+            'nome' => $nome,
+            'preco' => $preco,
+            'categoria' => $categoria,
+            'imagem' => $imagem,
+            'texto' => $texto
+        ];
+
+        header('Location: produtos.php?produtoadd=1');
+        exit;
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -53,10 +104,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="form-card">
                 <h2>Cadastrar Novo Produto</h2>
 
+                <?php if (!empty($erros)): ?>
+                    <div style="color:red; margin-bottom:15px;">
+                        <?php foreach ($erros as $e): ?>
+                            <p><?php echo $e; ?></p>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
+
                 <form action="cadastrar-produto.php" method="POST">
                     <div class="form-group">
                         <label>Nome do Produto</label>
-                        <input type="text" placeholder="Digite o nome do produto" name="nome">
+                        <input type="text" placeholder="Digite o nome do produto" name="nome" value="<?php echo $_POST['nome'] ?? ''; ?>">
                     </div>
 
                     <div class="row">
@@ -75,7 +134,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                         <div class="form-group">
                             <label>Preço (R$)</label>
-                            <input type="number" step="0.01" placeholder="0.00" name="preco">
+                            <input type="number" step="0.01" placeholder="0.00" name="preco" value="<?php echo $_POST['preco'] ?? ''; ?>">
                         </div>
                     </div>
 

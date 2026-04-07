@@ -13,8 +13,8 @@
 <body>
 
   <?php
-    require_once 'partials/header.php';
-    ?>
+  require_once 'partials/header.php';
+  ?>
 
   <section class="hero" id="home">
     <div class="hero-texto">
@@ -28,104 +28,54 @@
 
     <section id="produtos">
 
-      <section id="aparelhos">
-        <h2>Aparelhos</h2>
-        <div class="grid">
+      <h2>Produtos Mais Vendidos</h2>
 
-          <article class="produto">
-            <img src="imagens/supino.png" alt="Banco supino">
-            <h3>Banco Supino</h3>
-            <p class="preco">R$ 430,00</p>
-            <button>Comprar</button>
-          </article>
+      <div class="grid">
 
-          <article class="produto">
-            <img src="imagens/leg.png" alt="Leg press 90 graus">
-            <h3>Leg Press 90°</h3>
-            <p class="preco">R$ 2.000,00</p>
-            <button>Comprar</button>
-          </article>
+        <article class="produto">
+          <img src="imagens/supino.png" alt="Banco supino">
+          <h3>Banco Supino</h3>
+          <p class="preco">R$ 430,00</p>
+          <button>Comprar</button>
+        </article>
 
-          <article class="produto">
-            <img src="imagens/costas.png" alt="Puxada alta">
-            <h3>Puxada Alta</h3>
-            <p class="preco">R$ 7.000,00</p>
-            <button>Comprar</button>
-          </article>
+        <article class="produto">
+          <img src="imagens/bicicleta.png" alt="Bicicleta ergométrica">
+          <h3>Bicicleta</h3>
+          <p class="preco">R$ 650,00</p>
+          <button>Comprar</button>
+        </article>
 
-        </div>
-      </section>
+        <article class="produto">
+          <img src="imagens/whey.png" alt="Whey protein">
+          <h3>Whey Protein</h3>
+          <p class="preco">R$ 80,00</p>
+          <button>Comprar</button>
+        </article>
 
-      <section id="ergometros">
-        <h2>Ergômetros</h2>
-        <div class="grid">
+        <article class="produto">
+          <img src="imagens/creatina.png" alt="Creatina">
+          <h3>Creatina</h3>
+          <p class="preco">R$ 60,00</p>
+          <button>Comprar</button>
+        </article>
 
-          <article class="produto">
-            <img src="imagens/esteira.png" alt="Esteira ergométrica">
-            <h3>Esteira</h3>
-            <p class="preco">R$ 2.000,00</p>
-            <button>Comprar</button>
-          </article>
-
-          <article class="produto">
-            <img src="imagens/bicicleta.png" alt="Bicicleta ergométrica">
-            <h3>Bicicleta</h3>
-            <p class="preco">R$ 650,00</p>
-            <button>Comprar</button>
-          </article>
-
-        </div>
-      </section>
-
-      <section id="suplementos">
-        <h2>Suplementos</h2>
-        <div class="grid">
-
-          <article class="produto">
-            <img src="imagens/whey.png" alt="Whey protein">
-            <h3>Whey Protein</h3>
-            <p class="preco">R$ 80,00</p>
-            <button>Comprar</button>
-          </article>
-
-          <article class="produto">
-            <img src="imagens/creatina.png" alt="Creatina">
-            <h3>Creatina</h3>
-            <p class="preco">R$ 60,00</p>
-            <button>Comprar</button>
-          </article>
-
-        </div>
-      </section>
-
-      <section id="roupas">
-        <h2>Roupas</h2>
-        <div class="grid">
-
-          <article class="produto">
-            <img src="imagens/moletom.png" alt="moletom">
-            <h3>Moletom Fit Force</h3>
-            <p class="preco">R$ 249,90</p>
-            <button>Comprar</button>
-          </article>
-          <article class="produto">
-            <img src="imagens/camiseta(m).png" alt="moletom">
-            <h3>Camiseta Dry Fit</h3>
-            <p class="preco">R$ 69,90</p>
-            <button>Comprar</button>
-          </article>
-          <article class="produto">
-            <img src="imagens/calca.png" alt="calca">
-            <h3>Calça Esportiva Fit Force</h3>
-            <p class="preco">R$ 159,90</p>
-            <button>Comprar</button>
-          </article>
-        </div>
-      </section>
-
+        <article class="produto">
+          <img src="imagens/moletom.png" alt="moletom">
+          <h3>Moletom Fit Force</h3>
+          <p class="preco">R$ 249,90</p>
+          <button>Comprar</button>
+        </article>
     </section>
 
-      <p class="saiba-mais"><a href="produtos.php">Mais Produtos</a></p>
+    <section class="catalogo">
+      <div class="grid-catalogo">
+        <img src="imagens/catalogo-calca.jpg">
+        <img src="imagens/catalogo-conju-top.jpg"
+      </div>
+    </section>
+
+    <p class="saiba-mais"><a href="produtos.php">Mais Produtos</a></p>
 
     <section id="contato">
       <h2>Contato</h2>
@@ -139,24 +89,25 @@
       </form>
     </section>
 
-    <p class="cadastro-produto"><a  href="cadastrar-produto.php">Cadastrar Produto</a></p>
+    <p class="cadastro-produto"><a href="cadastrar-produto.php">Cadastrar Produto</a></p>
   </main>
 
-   <?php
-    require_once 'partials/footer.php';
-    ?>
-    
-   <script>
-        window.onscroll = function() {
-            const header = document.querySelector('.topo');
-            
-            if (window.scrollY > 350) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        };
-    </script>
+  <?php
+  require_once 'partials/footer.php';
+  ?>
+
+  <script>
+    window.onscroll = function() {
+      const header = document.querySelector('.topo');
+
+      if (window.scrollY > 350) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    };
+  </script>
 
 </body>
+
 </html>

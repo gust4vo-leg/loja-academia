@@ -17,6 +17,7 @@ $produtos_base = [
         'preco' => 429.90,
         'categoria' => 'aparelhos',
         'imagem' => 'imagens/supino.png',
+        'tamanho' => 'Único',
         'texto' => 'Banco supino resistente e confortável, ideal para treinos de peito com barra ou halteres. Estrutura reforçada e design ergonômico.'
     ],
     [
@@ -25,6 +26,7 @@ $produtos_base = [
         'preco' => 1999.90,
         'categoria' => 'aparelhos',    
         'imagem' => 'imagens/leg.png',
+        'tamanho' => 'Único',
         'texto' => 'Equipamento profissional para treino de pernas, focado em quadríceps e glúteos. Estrutura robusta e suporte para altas cargas.'
     ],
     [
@@ -33,6 +35,7 @@ $produtos_base = [
         'preco' => 6999.90,
         'categoria' => 'aparelhos',    
         'imagem' => 'imagens/costas.png',
+        'tamanho' => 'Único',
         'texto' => 'Máquina ideal para treino de costas, especialmente dorsal. Sistema de cabos suave e banco confortável.'
     ],
     [
@@ -41,6 +44,7 @@ $produtos_base = [
         'preco' => 1999.90,
         'categoria' => 'ergometros',    
         'imagem' => 'imagens/esteira.png',
+        'tamanho' => 'Único',
         'texto' => 'Esteira ergométrica com controle de velocidade, ideal para caminhadas e corridas em casa.'
     ],
     [
@@ -49,6 +53,7 @@ $produtos_base = [
         'preco' => 649.90,
         'categoria' => 'ergometros',    
         'imagem' => 'imagens/bicicleta.png',
+        'tamanho' => 'Único',
         'texto' => 'Bicicleta ergométrica confortável, perfeita para exercícios cardiovasculares com baixo impacto.'
     ],
     [
@@ -57,6 +62,7 @@ $produtos_base = [
         'preco' => 79.90,
         'categoria' => 'suplementos',    
         'imagem' => 'imagens/whey.png',
+        'tamanho' => ['500g', '1kg', '1,5kg'],
         'texto' => 'Suplemento proteico ideal para ganho de massa muscular e recuperação pós-treino.'
     ],
     [
@@ -65,6 +71,7 @@ $produtos_base = [
         'preco' => 59.90,
         'categoria' => 'suplementos',    
         'imagem' => 'imagens/creatina.png',
+        'tamanho' => ['300g', '500g', '1kg'],
         'texto' => 'Creatina de alta qualidade que aumenta força, desempenho e explosão muscular.'
     ],
     [
@@ -73,6 +80,7 @@ $produtos_base = [
         'preco' => 149.90,
         'categoria' => 'roupamasculina',    
         'imagem' => 'imagens/moletom.png',
+        'tamanho' => ['P', 'M', 'G', 'GG'],
         'texto' => 'Moletom confortável e estiloso, ideal para treinos em dias frios ou uso casual.'
     ],
     [
@@ -81,6 +89,7 @@ $produtos_base = [
         'preco' => 69.90,
         'categoria' => 'roupamasculina',    
         'imagem' => 'imagens/camiseta(m).png',
+        'tamanho' => ['P', 'M', 'G', 'GG'],
         'texto' => 'Camiseta leve com tecnologia Dry Fit que ajuda na evaporação do suor durante o treino.'
     ],
     [
@@ -89,6 +98,7 @@ $produtos_base = [
         'preco' => 119.90,
         'categoria' => 'roupamasculina',    
         'imagem' => 'imagens/camiseta-termica.png',
+        'tamanho' => ['P', 'M', 'G', 'GG'],
         'texto' => 'Camiseta térmica ideal para manter a temperatura corporal durante treinos em clima frio.'
     ],
     [
@@ -97,6 +107,7 @@ $produtos_base = [
         'preco' => 219.90,
         'categoria' => 'roupamasculina',    
         'imagem' => 'imagens/conjuntoTermico.png',
+        'tamanho' => ['P', 'M', 'G', 'GG'],
         'texto' => 'Conjunto completo térmico para máximo conforto e desempenho em dias frios.'
     ],
     [
@@ -105,6 +116,7 @@ $produtos_base = [
         'preco' => 59.90,
         'categoria' => 'roupamasculina',    
         'imagem' => 'imagens/bermuda.png',
+        'tamanho' => ['P', 'M', 'G', 'GG'],
         'texto' => 'Bermuda leve e confortável, perfeita para treinos intensos ou uso casual.'
     ],
     [
@@ -113,6 +125,7 @@ $produtos_base = [
         'preco' => 149.90,
         'categoria' => 'roupafeminina',    
         'imagem' => 'imagens/moletom-feminino.png',
+        'tamanho' => ['P', 'M', 'G', 'GG'],
         'texto' => 'Moletom feminino com ótimo caimento, ideal para conforto e estilo no dia a dia.'
     ],
     [
@@ -121,6 +134,7 @@ $produtos_base = [
         'preco' => 49.90,
         'categoria' => 'roupafeminina',    
         'imagem' => 'imagens/legging.png',
+        'tamanho' => ['P', 'M', 'G', 'GG'],
         'texto' => 'Legging com alta elasticidade e conforto, ideal para academia e atividades físicas.'
     ],
 ];

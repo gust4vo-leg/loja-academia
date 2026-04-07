@@ -2,19 +2,28 @@
 require_once 'init.php';
 
 $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
+$ids = array_column($_SESSION['produtos'], 'id');
+$index = array_search($id, $ids);
 
-$produto = null;
-foreach ($_SESSION['produtos'] as $p) {
-    if ($p['id'] === $id) {
-        $produto = $p;
-        break;
-    }
+if ($index !== false) {
+$produto = $_SESSION['produtos'][$index];
+} else {
+    header('Location: 404.php');
+    exit();
 }
 
-if (!$produto) {
-    header('Location: produtos.php');
-    exit;
-}
+// $produto = null;
+// foreach ($_SESSION['produtos'] as $p) {
+//     if ($p['id'] === $id) {
+//         $produto = $p;
+//         break;
+//     }
+// }
+
+// if (!$produto) {
+//     header('Location: produtos.php');
+//     exit;
+// }
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -68,42 +77,17 @@ if (!$produto) {
                     <?php echo isset($produto['texto']) ? $produto['texto'] : 'Produto de qualidade Fit Force.'; ?>
                 </p>
 
-                <div class="tamanhos">
+                <!-- <div class="tamanhos">
                     <span>P</span>
                     <span>M</span>
                     <span>G</span>
                     <span>GG</span>
-                </div>
+                </div> -->
 
                 <button class="comprar">Comprar agora</button>
 
             </div>
 
-        </section>
-        <section class="produtos-recomendados">
-            <h3>Recomendados para você:</h3>
-
-            <div class="grid">
-                <?php
-                $recomendados = array_filter($_SESSION['produtos'], function($p) use ($id) {
-                    return $p['id'] !== $id;
-                });
-                $recomendados = array_values($recomendados);
-                shuffle($recomendados);
-                $recomendados = array_slice($recomendados, 0, 6);
- 
-                foreach ($recomendados as $r) {
-                    echo '
-                    <article class="ver-produto">
-                        <img src="' . $r['imagem'] . '" alt="' . $r['nome'] . '">
-                        <h3>' . $r['nome'] . '</h3>
-                        <p class="preco">R$ ' . number_format($r['preco'], 2, ',', '.') . '</p>
-                        <a href="verificacao_produto.php?id=' . $r['id'] . '"><button>Comprar</button></a>
-                    </article>
-                    ';
-                }
-                ?>
-            </div>
         </section>
         <section class="cupons">
             <form>

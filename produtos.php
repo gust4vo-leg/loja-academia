@@ -19,11 +19,11 @@ $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
 
 <?php require 'partials/header.php'; ?>
 
-<?php
+<!-- <?php
 if (isset($_GET['produtoadd']) && $_GET['produtoadd'] === '1') {
     echo '<p class="aviso">Produto Adicionado Com Sucesso!!!</p>';
 }
-?>
+?> -->
 
 <main>
     <div class="container">
